@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BigCell" id="gTV-IL-0wX" customClass="BigCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" canCancelContentTouches="NO" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="tHd-f5-BCI">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lUp-fm-9rG">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lUp-fm-9rG" firstAttribute="top" secondItem="tHd-f5-BCI" secondAttribute="top" id="7BD-te-Db5"/>
+                            <constraint firstItem="lUp-fm-9rG" firstAttribute="leading" secondItem="tHd-f5-BCI" secondAttribute="leading" id="Ipo-UY-ZxP"/>
+                            <constraint firstItem="lUp-fm-9rG" firstAttribute="centerY" secondItem="tHd-f5-BCI" secondAttribute="centerY" id="KmZ-7n-cem"/>
+                            <constraint firstItem="lUp-fm-9rG" firstAttribute="centerX" secondItem="tHd-f5-BCI" secondAttribute="centerX" id="b2D-IG-NHp"/>
+                            <constraint firstAttribute="trailing" secondItem="lUp-fm-9rG" secondAttribute="trailing" id="g0I-68-3pF"/>
+                            <constraint firstAttribute="bottom" secondItem="lUp-fm-9rG" secondAttribute="bottom" id="zmZ-42-XEq"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="delegate" destination="gTV-IL-0wX" id="8mG-st-ijj"/>
+                        </connections>
+                    </scrollView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tHd-f5-BCI" secondAttribute="trailing" id="SFM-8t-BvM"/>
+                <constraint firstItem="tHd-f5-BCI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Yg1-Ui-7g1"/>
+                <constraint firstAttribute="bottom" secondItem="tHd-f5-BCI" secondAttribute="bottom" id="cnw-kV-AE6"/>
+                <constraint firstItem="tHd-f5-BCI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hXg-sz-QWU"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="lUp-fm-9rG" id="dmJ-PX-xWd"/>
+                <outlet property="scrollView" destination="tHd-f5-BCI" id="LdF-zt-SAo"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>
